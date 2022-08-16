@@ -1,4 +1,4 @@
-# Proyecto para practicar
+# Proyecto 
 
 Este es un proyecto de Vanilla TypeScript en Vite
 
