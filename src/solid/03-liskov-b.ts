@@ -70,3 +70,15 @@ export class Volvo extends Vehicle {
     }
 
 }
+
+
+export class Ford extends Vehicle {
+    constructor(private numberOfSeats: number) {
+        super();
+    }
+
+    getNumberOfSeats() {
+        return this.numberOfSeats;
+    }
+
+}
