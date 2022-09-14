@@ -1,11 +1,16 @@
 //Es complicado porque tengo una fuerte dependencia de axios
-import axios from 'axios';
+//import axios from 'axios';
+import { HttpClient } from './03-open-close-c';
+
 
 
 export class TodoService { 
 
+
+    constructor(private http: HttpClient) {}
+
     async getTodoItems() {
-        const { data } = await axios.get('https://jsonplaceholder.typicode.com/todos/');
+        const { data, status } = await this.http.get('https://jsonplaceholder.typicode.com/todos/');
         return data;
     }
 }
@@ -13,17 +18,26 @@ export class TodoService {
 
 export class PostService {
 
+
+    constructor(private http: HttpClient) {}
+
+
     async getPosts() {
-        const { data } = await axios.get('https://jsonplaceholder.typicode.com/posts');
+        const { data } = await this.http.get('https://jsonplaceholder.typicode.com/posts');
         return data;
     }
 }
 
 
-export class PhotosService {
+
+    export class PhotosService {
+
+
+
+    constructor(private http: HttpClient) {}
 
     async getPhotos() {
-        const { data } = await axios.get('https://jsonplaceholder.typicode.com/photos');
+        const { data } = await this.http.get('https://jsonplaceholder.typicode.com/photos');
         return data;
     }
 
