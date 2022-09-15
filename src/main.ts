@@ -1,7 +1,7 @@
 import './style.css'
 // import './clean-code/05-dry'
 // import './clean-code/07-tarea'
-import './solid/03-liskov-a'
+ import './solid/05-dependency-a';
 
 
 const app = document.querySelector<HTMLDivElement>('#app')!
